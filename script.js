@@ -44,14 +44,14 @@
             w: 40,
             h: 40,
             dy: 0,
-            jump: -14,     // Yumuşak uçuş
-            grav: 0.6,     // Hafif süzülme
+            jump: -12,     // Yumuşak uçuş
+            grav: 0.5,     // Hafif süzülme
             grounded: true
         };
 
         let obstacles = [];
         let frame = 0;
-        let speed = 3.5;
+        let speed = 4.5;
 
         const loop = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -151,7 +151,7 @@
                 hearts.push({
                     x: Math.random() * (canvas.width - 20),
                     y: 0,
-                    s: 2.5    // 🔥 daha yavaş düşüş
+                    s: 3.5    // 🔥 daha yavaş düşüş
                 });
             }
 
@@ -267,4 +267,5 @@
             }, 1000);
         };
     }
+
 };
