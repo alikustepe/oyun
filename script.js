@@ -51,7 +51,7 @@
 
         let obstacles = [];
         let frame = 0;
-        let speed = 4.5;
+        let speed = 6;
 
         const loop = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -147,7 +147,7 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             // 🔥 kalpler daha seyrek üretiliyor
-            if (Math.random() < 0.02) {
+            if (Math.random() < 0.05) {
                 hearts.push({
                     x: Math.random() * (canvas.width - 20),
                     y: 0,
@@ -269,3 +269,4 @@
     }
 
 };
+
