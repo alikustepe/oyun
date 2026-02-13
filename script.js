@@ -51,7 +51,7 @@
 
         let obstacles = [];
         let frame = 0;
-        let speed = 6;
+        let speed = 8;
 
         const loop = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -269,4 +269,5 @@
     }
 
 };
+
 
