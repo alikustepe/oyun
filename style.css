@@ -1,0 +1,195 @@
+﻿:root {
+    --pink: #ff477e;
+    --glass: rgba(255, 255, 255, 0.4);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    height: 100dvh;
+    overflow: hidden;
+    color: #444;
+}
+
+.screen {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+    .screen.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+/* Intro Kalp Animasyonu */
+.heart-animation {
+    font-size: 4rem;
+    animation: pulse 1.5s infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Glassmorphism */
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid white;
+    text-align: center;
+    width: 85%;
+    max-width: 350px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    background: white;
+    border: none;
+    padding: 20px;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+    .menu-item span {
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-top: 5px;
+        color: var(--pink);
+    }
+
+    .menu-item:active {
+        transform: scale(0.9);
+    }
+
+/* Oyun Alanı */
+#game-container {
+    width: 90%;
+    max-width: 400px;
+    aspect-ratio: 4/5;
+    background: white;
+    border-radius: 1rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.game-ui {
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btn-back {
+    background: none;
+    border: 1px solid var(--pink);
+    color: var(--pink);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Hafıza ve Kutu Oyunları */
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 15px;
+    height: 100%;
+}
+
+.card {
+    background: var(--pink);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    transition: 0.3s;
+}
+
+    .card.flipped {
+        background: white;
+        border: 2px solid var(--pink);
+        color: initial;
+    }
+
+.box-area {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    background: var(--pink);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: 0.4s;
+    cursor: pointer;
+    position: absolute;
+}
+
+/* Mektup Kağıdı */
+.letter-paper {
+    background: #fffcf2;
+    padding: 30px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--pink);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+}

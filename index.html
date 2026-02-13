@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sana Bir Sürprizim Var ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+        <section id="intro-screen" class="screen active">
+            <div class="glass-card intro-box">
+                <div class="heart-animation">❤️</div>
+                <h1>Hoş Geldin Sevgilim</h1>
+                <p>Bu uygulama sadece senin için hazırlandı.</p>
+                <button class="btn-primary" onclick="engine.showMenu()">Başla ✨</button>
+            </div>
+        </section>
+
+        <section id="menu-screen" class="screen">
+            <div class="glass-card">
+                <h2>Bir Oyun Seç</h2>
+                <div class="menu-grid">
+                    <button class="menu-item" onclick="engine.loadGame('runner')">🦖<span>Koşucu</span></button>
+                    <button class="menu-item" onclick="engine.loadGame('catcher')">🧺<span>Topla</span></button>
+                    <button class="menu-item" onclick="engine.loadGame('shuffle')">📦<span>Bul</span></button>
+                    <button class="menu-item" onclick="engine.loadGame('memory')">🧠<span>Hafıza</span></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-screen" class="screen">
+            <div class="game-ui">
+                <button class="btn-back" onclick="engine.showMenu()">✕</button>
+                <div id="score-display">Puan: 0</div>
+            </div>
+            <div id="game-container"></div>
+            <p id="game-tip"></p>
+        </section>
+
+        <section id="letter-screen" class="screen">
+            <div class="letter-paper">
+                <h2>...Canım Sevgilim...</h2>
+                <div class="letter-content">
+                    <p>Tıpkı bu oyunlardaki gibi, hayatın karşına çıkaracağı tüm engelleri birlikte aşacağımızı biliyorum.</p>
+                    <p>Sen benim en güzel manzaram, en tatlı heyecanımsın. İyiki benimlesin. Her zaman yanımda olman dileğiyle...</p>
+                    <p><strong>Seni çok seviyorum!</strong></p>
+                </div>
+                <p class="signature">-❤️-</p>
+                <button class="btn-primary" onclick="engine.showMenu()">Yeniden Oyna</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
